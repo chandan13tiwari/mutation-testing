@@ -15,9 +15,19 @@ class OperationServiceTest {
 
     @Test
     void testAdditionForHappyPath() throws InvalidNumberException {
-        int x = 4;
-        int y =5;
-        int expectedResult = 9;
+        int x = 0;
+        int y = 0;
+        int expectedResult = 0;
+        int actualResult = operationService.addition(x, y);
+
+        Assertions.assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    void testAdditionForHappyPathNew() throws InvalidNumberException {
+        int x = 2;
+        int y = 2;
+        int expectedResult = 4;
         int actualResult = operationService.addition(x, y);
 
         Assertions.assertEquals(expectedResult, actualResult);
